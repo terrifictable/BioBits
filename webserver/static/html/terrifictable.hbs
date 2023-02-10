@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
+
+    <title>TerrificTable</title>
+</head>
+<body>
+
+<div class="banner">
+    <!-- TODO -->
+</div>
+<div class="background"></div>
+
+<h1>TerrificTable</h1>
+<h4>I enjoy developing programs in a lot of programming languages</h4>
+
+<div class="links">
+    <div class="link">
+        <a href="https://github.com/TerrificTable">
+            <img src="/static/assets/github.svg" alt="github" width="30">
+            <span>GitHub</span>
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://youtube.com/">
+            <img src="/static/assets/youtube.svg" alt="youtube" width="30">
+            <span>Youtube</span>
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://gitlab.com/TerrificTable">
+            <img src="/static/assets/gitlab.svg" alt="gitlab" width="30">
+            <span>GitLab</span>
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://twitter.com/TerrificTable">
+            <img src="/static/assets/twitter.svg" alt="twitter" width="20">
+            <span>Twitter</span>
+        </a>
+    </div>
+    <div class="link">
+        <a href="https://terrifictable.xyz">
+            <img src="/static/assets/homepage.svg" alt="terrifictable.xyz" width="20">
+            <span>terrifictable.xyz</span>
+        </a>
+    </div>
+</div>
+
+<div class="discord">
+    <h3  id="discord_name">{{ discord_user.Username }}<span id="discord_discriminator">#{{ discord_user.Discriminator }}</span></h3>
+    <h4  id="discord_bio">{{ discord_user.Bio }}</h4>
+    <p>{{ badges }}</p>
+    <img id="discord_avatar" alt="avatar" src="https://cdn.discordapp.com/avatars/{{ discord_user.ID }}/{{ discord_user.AvatarHash }}">
+</div>
+
+</body>
+</html>

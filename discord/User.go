@@ -3,9 +3,14 @@ package discord
 import (
 	"main/requests"
 	"encoding/json"
+	"fmt"
 )
 
 func (dc *Discord) GetUser(id string) error {
+	if dc.token == "" {
+		return fmt.Errorf("no token provided")
+	}
+
 	url := BaseURL + "/" + ApiVersions["9"] + "/users/" + id + "/profile"
 	resp, err := requests.GetWithHeaders(url, dc.GetHeaders())
 	if err != nil {

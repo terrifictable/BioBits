@@ -5,14 +5,14 @@ import "net/http"
 type Discord struct {
 	token string
 
-	User Profile
+	User User
 }
 
 
 func New(token string) *Discord {
 	return &Discord{
 		token: token,
-		User: Profile{},
+		User: User{},
 	}
 }
 

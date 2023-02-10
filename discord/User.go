@@ -11,13 +11,13 @@ func (dc *Discord) GetUser(id string) error {
 		return fmt.Errorf("no token provided")
 	}
 
-	url := BaseURL + "/" + ApiVersions["9"] + "/users/" + id + "/profile"
+	url := BaseURL + "/" + ApiVersions["9"] + "/users/" + id
 	resp, err := requests.GetWithHeaders(url, dc.GetHeaders())
 	if err != nil {
 		return err
 	}
 
-	var result Profile
+	var result User
 	err = json.Unmarshal(resp, &result)
 	if err != nil {
 		return err

@@ -13,8 +13,8 @@ func ProfileHandler(c *fiber.Ctx) error {
 	}
 
 	return c.Render("terrifictable", fiber.Map{
-		"discord_user": FormatUser(utils.Discord.User.User),
-		"badges": FlagToBadges(utils.Discord.User.User.PublicFlags),
+		"discord_user": FormatUser(utils.Discord.User),
+		"badges": FlagToBadges(utils.Discord.User.PublicFlags),
 	})
 }
 
